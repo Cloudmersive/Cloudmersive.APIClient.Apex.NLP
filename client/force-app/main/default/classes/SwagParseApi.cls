@@ -38,7 +38,7 @@ public class SwagParseApi {
         List<Swagger.Param> form = new List<Swagger.Param>();
 
         return (SwagParseResponse) client.invoke(
-            'POST', '/nlp/parse/tree',
+            'POST', '/nlp-v2/parse/tree',
             (SwagParseRequest) params.get('input'),
             query, form,
             new Map<String, Object>(),

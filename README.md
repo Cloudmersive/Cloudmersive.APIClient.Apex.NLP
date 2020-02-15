@@ -67,7 +67,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SwagExtractEntitiesApi* | [**extractEntitiesPost**](docs/SwagExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *SwagLanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/SwagLanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
-*SwagParseApi* | [**parseParseString**](docs/SwagParseApi.md#parseParseString) | **POST** /nlp/parse/tree | Parse string to syntax tree
+*SwagParseApi* | [**parseParseString**](docs/SwagParseApi.md#parseParseString) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *SwagPosTaggerApi* | [**posTaggerTagAdjectives**](docs/SwagPosTaggerApi.md#posTaggerTagAdjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *SwagPosTaggerApi* | [**posTaggerTagAdverbs**](docs/SwagPosTaggerApi.md#posTaggerTagAdverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs
 *SwagPosTaggerApi* | [**posTaggerTagNouns**](docs/SwagPosTaggerApi.md#posTaggerTagNouns) | **POST** /nlp-v2/pos/tag/nouns | Part-of-speech tag a string, filter to nouns
