@@ -69,6 +69,8 @@ Class | Method | HTTP request | Description
 *SwagLanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/SwagLanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *SwagLanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/SwagLanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
 *SwagLanguageTranslationApi* | [**languageTranslationTranslateEngToDeu**](docs/SwagLanguageTranslationApi.md#languageTranslationTranslateEngToDeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI
+*SwagLanguageTranslationApi* | [**languageTranslationTranslateEngToRus**](docs/SwagLanguageTranslationApi.md#languageTranslationTranslateEngToRus) | **POST** /nlp-v2/translate/language/eng/to/rus | Translate English to Russian text with Deep Learning AI
+*SwagLanguageTranslationApi* | [**languageTranslationTranslateRusToEng**](docs/SwagLanguageTranslationApi.md#languageTranslationTranslateRusToEng) | **POST** /nlp-v2/translate/language/rus/to/eng | Translate Russian to English text with Deep Learning AI
 *SwagParseApi* | [**parseParseString**](docs/SwagParseApi.md#parseParseString) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *SwagPosTaggerApi* | [**posTaggerTagAdjectives**](docs/SwagPosTaggerApi.md#posTaggerTagAdjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *SwagPosTaggerApi* | [**posTaggerTagAdverbs**](docs/SwagPosTaggerApi.md#posTaggerTagAdverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs

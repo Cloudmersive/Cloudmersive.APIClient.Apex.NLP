@@ -73,4 +73,52 @@ public class SwagLanguageTranslationApi {
             SwagLanguageTranslationResponse.class
         );
     }
+    /**
+     * Translate English to Russian text with Deep Learning AI
+     * Automatically translates input text in English to output text in Russian using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+     * @param input Input translation request (required)
+     * @return SwagLanguageTranslationResponse
+     * @throws Swagger.ApiException if fails to make API call
+     */
+    public SwagLanguageTranslationResponse languageTranslationTranslateEngToRus(Map<String, Object> params) {
+        client.assertNotNull(params.get('input'), 'input');
+        List<Swagger.Param> query = new List<Swagger.Param>();
+        List<Swagger.Param> form = new List<Swagger.Param>();
+
+        return (SwagLanguageTranslationResponse) client.invoke(
+            'POST', '/nlp-v2/translate/language/eng/to/rus',
+            (SwagLanguageTranslationRequest) params.get('input'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Apikey' },
+            SwagLanguageTranslationResponse.class
+        );
+    }
+    /**
+     * Translate Russian to English text with Deep Learning AI
+     * Automatically translates input text in Russian to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+     * @param input Input translation request (required)
+     * @return SwagLanguageTranslationResponse
+     * @throws Swagger.ApiException if fails to make API call
+     */
+    public SwagLanguageTranslationResponse languageTranslationTranslateRusToEng(Map<String, Object> params) {
+        client.assertNotNull(params.get('input'), 'input');
+        List<Swagger.Param> query = new List<Swagger.Param>();
+        List<Swagger.Param> form = new List<Swagger.Param>();
+
+        return (SwagLanguageTranslationResponse) client.invoke(
+            'POST', '/nlp-v2/translate/language/rus/to/eng',
+            (SwagLanguageTranslationRequest) params.get('input'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Apikey' },
+            SwagLanguageTranslationResponse.class
+        );
+    }
 }
