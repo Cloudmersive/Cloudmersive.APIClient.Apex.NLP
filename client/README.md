@@ -67,6 +67,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SwagExtractEntitiesApi* | [**extractEntitiesPost**](docs/SwagExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *SwagLanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/SwagLanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
+*SwagLanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/SwagLanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
+*SwagLanguageTranslationApi* | [**languageTranslationTranslateEngToDeu**](docs/SwagLanguageTranslationApi.md#languageTranslationTranslateEngToDeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI
 *SwagParseApi* | [**parseParseString**](docs/SwagParseApi.md#parseParseString) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *SwagPosTaggerApi* | [**posTaggerTagAdjectives**](docs/SwagPosTaggerApi.md#posTaggerTagAdjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *SwagPosTaggerApi* | [**posTaggerTagAdverbs**](docs/SwagPosTaggerApi.md#posTaggerTagAdverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs
@@ -74,6 +76,7 @@ Class | Method | HTTP request | Description
 *SwagPosTaggerApi* | [**posTaggerTagPronouns**](docs/SwagPosTaggerApi.md#posTaggerTagPronouns) | **POST** /nlp-v2/pos/tag/pronouns | Part-of-speech tag a string, filter to pronouns
 *SwagPosTaggerApi* | [**posTaggerTagSentence**](docs/SwagPosTaggerApi.md#posTaggerTagSentence) | **POST** /nlp-v2/pos/tag/sentence | Part-of-speech tag a string
 *SwagPosTaggerApi* | [**posTaggerTagVerbs**](docs/SwagPosTaggerApi.md#posTaggerTagVerbs) | **POST** /nlp-v2/pos/tag/verbs | Part-of-speech tag a string, filter to verbs
+*SwagRephraseApi* | [**rephraseTranslateDeuToEng**](docs/SwagRephraseApi.md#rephraseTranslateDeuToEng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 *SwagSegmentationApi* | [**segmentationGetSentences**](docs/SwagSegmentationApi.md#segmentationGetSentences) | **POST** /nlp-v2/segmentation/sentences | Extract sentences from string
 *SwagSegmentationApi* | [**segmentationGetWords**](docs/SwagSegmentationApi.md#segmentationGetWords) | **POST** /nlp-v2/segmentation/words | Get words in input string
 *SwagSpellcheckApi* | [**spellcheckCheckSentence**](docs/SwagSpellcheckApi.md#spellcheckCheckSentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
@@ -94,12 +97,18 @@ Class | Method | HTTP request | Description
  - [SwagGetWordsResponse](docs/SwagGetWordsResponse.md)
  - [SwagLanguageDetectionRequest](docs/SwagLanguageDetectionRequest.md)
  - [SwagLanguageDetectionResponse](docs/SwagLanguageDetectionResponse.md)
+ - [SwagLanguageTranslationRequest](docs/SwagLanguageTranslationRequest.md)
+ - [SwagLanguageTranslationResponse](docs/SwagLanguageTranslationResponse.md)
  - [SwagParseRequest](docs/SwagParseRequest.md)
  - [SwagParseResponse](docs/SwagParseResponse.md)
  - [SwagPosRequest](docs/SwagPosRequest.md)
  - [SwagPosResponse](docs/SwagPosResponse.md)
  - [SwagPosSentence](docs/SwagPosSentence.md)
  - [SwagPosTaggedWord](docs/SwagPosTaggedWord.md)
+ - [SwagRephraseRequest](docs/SwagRephraseRequest.md)
+ - [SwagRephraseResponse](docs/SwagRephraseResponse.md)
+ - [SwagRephrasedSentence](docs/SwagRephrasedSentence.md)
+ - [SwagRephrasedSentenceOption](docs/SwagRephrasedSentenceOption.md)
  - [SwagSentenceSegmentationRequest](docs/SwagSentenceSegmentationRequest.md)
  - [SwagSentenceSegmentationResponse](docs/SwagSentenceSegmentationResponse.md)
  - [SwagWordPosition](docs/SwagWordPosition.md)
