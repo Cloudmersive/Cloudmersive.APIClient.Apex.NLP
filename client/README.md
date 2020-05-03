@@ -42,17 +42,17 @@ If everything is set correctly:
 Please follow the [installation](#installation) instruction and execute the following Apex code:
 
 ```java
-SwagExtractEntitiesApi api = new SwagExtractEntitiesApi();
+SwagAnalyticsApi api = new SwagAnalyticsApi();
 SwagClient client = api.getClient();
 
 
 Map<String, Object> params = new Map<String, Object>{
-    'value' => SwagExtractEntitiesRequest.getExample()
+    'input' => SwagSentimentAnalysisRequest.getExample()
 };
 
 try {
     // cross your fingers
-    SwagExtractEntitiesResponse result = api.extractEntitiesPost(params);
+    SwagSentimentAnalysisResponse result = api.analyticsSentiment(params);
     System.debug(result);
 } catch (Swagger.ApiException e) {
     // ...handle your exceptions
@@ -65,6 +65,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SwagAnalyticsApi* | [**analyticsSentiment**](docs/SwagAnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *SwagExtractEntitiesApi* | [**extractEntitiesPost**](docs/SwagExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *SwagLanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/SwagLanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *SwagLanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/SwagLanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
@@ -113,6 +114,8 @@ Class | Method | HTTP request | Description
  - [SwagRephrasedSentenceOption](docs/SwagRephrasedSentenceOption.md)
  - [SwagSentenceSegmentationRequest](docs/SwagSentenceSegmentationRequest.md)
  - [SwagSentenceSegmentationResponse](docs/SwagSentenceSegmentationResponse.md)
+ - [SwagSentimentAnalysisRequest](docs/SwagSentimentAnalysisRequest.md)
+ - [SwagSentimentAnalysisResponse](docs/SwagSentimentAnalysisResponse.md)
  - [SwagWordPosition](docs/SwagWordPosition.md)
 
 
