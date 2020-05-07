@@ -15,7 +15,7 @@
  */
 public class SwagSentimentAnalysisResponse implements Swagger.MappedProperties {
     /**
-     * True if the language detection operation was successful, false otherwise
+     * True if the sentiment analysis operation was successful, false otherwise
      * @return successful
      */
     public Boolean successful { get; set; }

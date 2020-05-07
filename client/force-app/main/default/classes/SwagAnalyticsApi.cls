@@ -26,6 +26,30 @@ public class SwagAnalyticsApi {
     }
 
     /**
+     * Perform Profanity and Obscene Language Analysis and Detection on Text
+     * Analyze input text using advanced Profanity and Obscene Language Analysis to determine if the input contains profane language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+     * @param input Input profanity analysis request (required)
+     * @return SwagProfanityAnalysisResponse
+     * @throws Swagger.ApiException if fails to make API call
+     */
+    public SwagProfanityAnalysisResponse analyticsProfanity(Map<String, Object> params) {
+        client.assertNotNull(params.get('input'), 'input');
+        List<Swagger.Param> query = new List<Swagger.Param>();
+        List<Swagger.Param> form = new List<Swagger.Param>();
+
+        return (SwagProfanityAnalysisResponse) client.invoke(
+            'POST', '/nlp-v2/analytics/profanity',
+            (SwagProfanityAnalysisRequest) params.get('input'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Apikey' },
+            SwagProfanityAnalysisResponse.class
+        );
+    }
+    /**
      * Perform Sentiment Analysis and Classification on Text
      * Analyze input text using advanced Sentiment Analysis to determine if the input is positive, negative, or neutral.  Supports English language input.  Consumes 1-2 API calls per sentence.
      * @param input Input sentiment analysis request (required)

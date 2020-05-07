@@ -47,12 +47,12 @@ SwagClient client = api.getClient();
 
 
 Map<String, Object> params = new Map<String, Object>{
-    'input' => SwagSentimentAnalysisRequest.getExample()
+    'input' => SwagProfanityAnalysisRequest.getExample()
 };
 
 try {
     // cross your fingers
-    SwagSentimentAnalysisResponse result = api.analyticsSentiment(params);
+    SwagProfanityAnalysisResponse result = api.analyticsProfanity(params);
     System.debug(result);
 } catch (Swagger.ApiException e) {
     // ...handle your exceptions
@@ -65,6 +65,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SwagAnalyticsApi* | [**analyticsProfanity**](docs/SwagAnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *SwagAnalyticsApi* | [**analyticsSentiment**](docs/SwagAnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *SwagExtractEntitiesApi* | [**extractEntitiesPost**](docs/SwagExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *SwagLanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/SwagLanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
@@ -108,6 +109,8 @@ Class | Method | HTTP request | Description
  - [SwagPosResponse](docs/SwagPosResponse.md)
  - [SwagPosSentence](docs/SwagPosSentence.md)
  - [SwagPosTaggedWord](docs/SwagPosTaggedWord.md)
+ - [SwagProfanityAnalysisRequest](docs/SwagProfanityAnalysisRequest.md)
+ - [SwagProfanityAnalysisResponse](docs/SwagProfanityAnalysisResponse.md)
  - [SwagRephraseRequest](docs/SwagRephraseRequest.md)
  - [SwagRephraseResponse](docs/SwagRephraseResponse.md)
  - [SwagRephrasedSentence](docs/SwagRephrasedSentence.md)
