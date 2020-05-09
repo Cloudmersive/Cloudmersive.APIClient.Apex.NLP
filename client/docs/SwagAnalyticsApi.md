@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**analyticsProfanity**](SwagAnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 [**analyticsSentiment**](SwagAnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+[**analyticsSubjectivity**](SwagAnalyticsApi.md#analyticsSubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 
 
 <a name="analyticsProfanity"></a>
@@ -96,6 +97,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SwagSentimentAnalysisResponse**](SwagSentimentAnalysisResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="analyticsSubjectivity"></a>
+# **analyticsSubjectivity**
+> SwagSubjectivityAnalysisResponse analyticsSubjectivity(input)
+
+Perform Subjectivity and Objectivity Analysis on Text
+
+Analyze input text using advanced Subjectivity and Objectivity Language Analysis to determine if the input text is objective or subjective, and how much.  Supports English language input.  Consumes 1-2 API calls per sentence.
+
+### Example
+```java
+SwagAnalyticsApi api = new SwagAnalyticsApi();
+SwagClient client = api.getClient();
+
+// Configure API key authorization: Apikey
+ApiKeyAuth Apikey = (ApiKeyAuth) client.getAuthentication('Apikey');
+Apikey.setApiKey('YOUR API KEY');
+
+Map<String, Object> params = new Map<String, Object>{
+    'input' => SwagSubjectivityAnalysisRequest.getExample()
+};
+
+try {
+    // cross your fingers
+    SwagSubjectivityAnalysisResponse result = api.analyticsSubjectivity(params);
+    System.debug(result);
+} catch (Swagger.ApiException e) {
+    // ...handle your exceptions
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**SwagSubjectivityAnalysisRequest**](SwagSubjectivityAnalysisRequest.md)| Input subjectivity analysis request |
+
+### Return type
+
+[**SwagSubjectivityAnalysisResponse**](SwagSubjectivityAnalysisResponse.md)
 
 ### Authorization
 

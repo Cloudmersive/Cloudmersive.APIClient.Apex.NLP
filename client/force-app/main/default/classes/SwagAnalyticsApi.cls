@@ -73,4 +73,28 @@ public class SwagAnalyticsApi {
             SwagSentimentAnalysisResponse.class
         );
     }
+    /**
+     * Perform Subjectivity and Objectivity Analysis on Text
+     * Analyze input text using advanced Subjectivity and Objectivity Language Analysis to determine if the input text is objective or subjective, and how much.  Supports English language input.  Consumes 1-2 API calls per sentence.
+     * @param input Input subjectivity analysis request (required)
+     * @return SwagSubjectivityAnalysisResponse
+     * @throws Swagger.ApiException if fails to make API call
+     */
+    public SwagSubjectivityAnalysisResponse analyticsSubjectivity(Map<String, Object> params) {
+        client.assertNotNull(params.get('input'), 'input');
+        List<Swagger.Param> query = new List<Swagger.Param>();
+        List<Swagger.Param> form = new List<Swagger.Param>();
+
+        return (SwagSubjectivityAnalysisResponse) client.invoke(
+            'POST', '/nlp-v2/analytics/subjectivity',
+            (SwagSubjectivityAnalysisRequest) params.get('input'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Apikey' },
+            SwagSubjectivityAnalysisResponse.class
+        );
+    }
 }

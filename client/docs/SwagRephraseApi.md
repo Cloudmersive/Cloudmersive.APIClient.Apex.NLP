@@ -4,12 +4,12 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**rephraseTranslateDeuToEng**](SwagRephraseApi.md#rephraseTranslateDeuToEng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
+[**rephraseEnglishRephraseSentenceBySentence**](SwagRephraseApi.md#rephraseEnglishRephraseSentenceBySentence) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 
 
-<a name="rephraseTranslateDeuToEng"></a>
-# **rephraseTranslateDeuToEng**
-> SwagRephraseResponse rephraseTranslateDeuToEng(input)
+<a name="rephraseEnglishRephraseSentenceBySentence"></a>
+# **rephraseEnglishRephraseSentenceBySentence**
+> SwagRephraseResponse rephraseEnglishRephraseSentenceBySentence(input)
 
 Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 
@@ -30,7 +30,7 @@ Map<String, Object> params = new Map<String, Object>{
 
 try {
     // cross your fingers
-    SwagRephraseResponse result = api.rephraseTranslateDeuToEng(params);
+    SwagRephraseResponse result = api.rephraseEnglishRephraseSentenceBySentence(params);
     System.debug(result);
 } catch (Swagger.ApiException e) {
     // ...handle your exceptions

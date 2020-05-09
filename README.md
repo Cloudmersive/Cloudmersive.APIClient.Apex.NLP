@@ -67,6 +67,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SwagAnalyticsApi* | [**analyticsProfanity**](docs/SwagAnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *SwagAnalyticsApi* | [**analyticsSentiment**](docs/SwagAnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+*SwagAnalyticsApi* | [**analyticsSubjectivity**](docs/SwagAnalyticsApi.md#analyticsSubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 *SwagExtractEntitiesApi* | [**extractEntitiesPost**](docs/SwagExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *SwagLanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/SwagLanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *SwagLanguageTranslationApi* | [**languageTranslationTranslateDeuToEng**](docs/SwagLanguageTranslationApi.md#languageTranslationTranslateDeuToEng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
@@ -80,7 +81,7 @@ Class | Method | HTTP request | Description
 *SwagPosTaggerApi* | [**posTaggerTagPronouns**](docs/SwagPosTaggerApi.md#posTaggerTagPronouns) | **POST** /nlp-v2/pos/tag/pronouns | Part-of-speech tag a string, filter to pronouns
 *SwagPosTaggerApi* | [**posTaggerTagSentence**](docs/SwagPosTaggerApi.md#posTaggerTagSentence) | **POST** /nlp-v2/pos/tag/sentence | Part-of-speech tag a string
 *SwagPosTaggerApi* | [**posTaggerTagVerbs**](docs/SwagPosTaggerApi.md#posTaggerTagVerbs) | **POST** /nlp-v2/pos/tag/verbs | Part-of-speech tag a string, filter to verbs
-*SwagRephraseApi* | [**rephraseTranslateDeuToEng**](docs/SwagRephraseApi.md#rephraseTranslateDeuToEng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
+*SwagRephraseApi* | [**rephraseEnglishRephraseSentenceBySentence**](docs/SwagRephraseApi.md#rephraseEnglishRephraseSentenceBySentence) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 *SwagSegmentationApi* | [**segmentationGetSentences**](docs/SwagSegmentationApi.md#segmentationGetSentences) | **POST** /nlp-v2/segmentation/sentences | Extract sentences from string
 *SwagSegmentationApi* | [**segmentationGetWords**](docs/SwagSegmentationApi.md#segmentationGetWords) | **POST** /nlp-v2/segmentation/words | Get words in input string
 *SwagSpellcheckApi* | [**spellcheckCheckSentence**](docs/SwagSpellcheckApi.md#spellcheckCheckSentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
@@ -119,6 +120,8 @@ Class | Method | HTTP request | Description
  - [SwagSentenceSegmentationResponse](docs/SwagSentenceSegmentationResponse.md)
  - [SwagSentimentAnalysisRequest](docs/SwagSentimentAnalysisRequest.md)
  - [SwagSentimentAnalysisResponse](docs/SwagSentimentAnalysisResponse.md)
+ - [SwagSubjectivityAnalysisRequest](docs/SwagSubjectivityAnalysisRequest.md)
+ - [SwagSubjectivityAnalysisResponse](docs/SwagSubjectivityAnalysisResponse.md)
  - [SwagWordPosition](docs/SwagWordPosition.md)
 
 

@@ -32,7 +32,7 @@ public class SwagRephraseApi {
      * @return SwagRephraseResponse
      * @throws Swagger.ApiException if fails to make API call
      */
-    public SwagRephraseResponse rephraseTranslateDeuToEng(Map<String, Object> params) {
+    public SwagRephraseResponse rephraseEnglishRephraseSentenceBySentence(Map<String, Object> params) {
         client.assertNotNull(params.get('input'), 'input');
         List<Swagger.Param> query = new List<Swagger.Param>();
         List<Swagger.Param> form = new List<Swagger.Param>();

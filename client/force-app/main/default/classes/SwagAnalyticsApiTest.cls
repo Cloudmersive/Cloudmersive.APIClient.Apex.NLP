@@ -65,4 +65,37 @@ private class SwagAnalyticsApiTest {
         response = (SwagSentimentAnalysisResponse) api.analyticsSentiment(params);
         System.assertEquals(expectedResponse, response);
     }
+
+    /**
+     * Perform Subjectivity and Objectivity Analysis on Text
+     *
+     * Analyze input text using advanced Subjectivity and Objectivity Language Analysis to determine if the input text is objective or subjective, and how much.  Supports English language input.  Consumes 1-2 API calls per sentence.
+     */
+    @isTest
+    private static void analyticsSubjectivityTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new SwaggerResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'input' => SwagSubjectivityAnalysisRequest.getExample()
+        };
+
+        SwagClient client;
+        SwagAnalyticsApi api;
+        SwagSubjectivityAnalysisResponse response;
+        SwagSubjectivityAnalysisResponse expectedResponse;
+
+        client = new SwagClient();
+        api = new SwagAnalyticsApi(client);
+        ((Swagger.ApiKeyAuth) client.getAuthentication('Apikey');
+            client.setApiKey('foo-bar-api-key');
+
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody('{\r\n  "SubjectivityScoreResult" : 0.8008281904610115,\r\n  "SentenceCount" : 6,\r\n  "Successful" : true\r\n}');
+        expectedResponse = SwagSubjectivityAnalysisResponse.getExample();
+        response = (SwagSubjectivityAnalysisResponse) api.analyticsSubjectivity(params);
+        System.assertEquals(expectedResponse, response);
+    }
 }
