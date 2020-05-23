@@ -67,6 +67,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *SwagAnalyticsApi* | [**analyticsProfanity**](docs/SwagAnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *SwagAnalyticsApi* | [**analyticsSentiment**](docs/SwagAnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+*SwagAnalyticsApi* | [**analyticsSimilarity**](docs/SwagAnalyticsApi.md#analyticsSimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
 *SwagAnalyticsApi* | [**analyticsSubjectivity**](docs/SwagAnalyticsApi.md#analyticsSubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 *SwagExtractEntitiesApi* | [**extractEntitiesPost**](docs/SwagExtractEntitiesApi.md#extractEntitiesPost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *SwagLanguageDetectionApi* | [**languageDetectionGetLanguage**](docs/SwagLanguageDetectionApi.md#languageDetectionGetLanguage) | **POST** /nlp-v2/language/detect | Detect language of text
@@ -120,6 +121,8 @@ Class | Method | HTTP request | Description
  - [SwagSentenceSegmentationResponse](docs/SwagSentenceSegmentationResponse.md)
  - [SwagSentimentAnalysisRequest](docs/SwagSentimentAnalysisRequest.md)
  - [SwagSentimentAnalysisResponse](docs/SwagSentimentAnalysisResponse.md)
+ - [SwagSimilarityAnalysisRequest](docs/SwagSimilarityAnalysisRequest.md)
+ - [SwagSimilarityAnalysisResponse](docs/SwagSimilarityAnalysisResponse.md)
  - [SwagSubjectivityAnalysisRequest](docs/SwagSubjectivityAnalysisRequest.md)
  - [SwagSubjectivityAnalysisResponse](docs/SwagSubjectivityAnalysisResponse.md)
  - [SwagWordPosition](docs/SwagWordPosition.md)

@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**analyticsProfanity**](SwagAnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 [**analyticsSentiment**](SwagAnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+[**analyticsSimilarity**](SwagAnalyticsApi.md#analyticsSimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
 [**analyticsSubjectivity**](SwagAnalyticsApi.md#analyticsSubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 
 
@@ -97,6 +98,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SwagSentimentAnalysisResponse**](SwagSentimentAnalysisResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="analyticsSimilarity"></a>
+# **analyticsSimilarity**
+> SwagSimilarityAnalysisResponse analyticsSimilarity(input)
+
+Perform Semantic Similarity Comparison of Two Strings
+
+Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+
+### Example
+```java
+SwagAnalyticsApi api = new SwagAnalyticsApi();
+SwagClient client = api.getClient();
+
+// Configure API key authorization: Apikey
+ApiKeyAuth Apikey = (ApiKeyAuth) client.getAuthentication('Apikey');
+Apikey.setApiKey('YOUR API KEY');
+
+Map<String, Object> params = new Map<String, Object>{
+    'input' => SwagSimilarityAnalysisRequest.getExample()
+};
+
+try {
+    // cross your fingers
+    SwagSimilarityAnalysisResponse result = api.analyticsSimilarity(params);
+    System.debug(result);
+} catch (Swagger.ApiException e) {
+    // ...handle your exceptions
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**SwagSimilarityAnalysisRequest**](SwagSimilarityAnalysisRequest.md)| Input similarity analysis request |
+
+### Return type
+
+[**SwagSimilarityAnalysisResponse**](SwagSimilarityAnalysisResponse.md)
 
 ### Authorization
 

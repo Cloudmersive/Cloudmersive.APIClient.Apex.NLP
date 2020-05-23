@@ -74,6 +74,30 @@ public class SwagAnalyticsApi {
         );
     }
     /**
+     * Perform Semantic Similarity Comparison of Two Strings
+     * Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+     * @param input Input similarity analysis request (required)
+     * @return SwagSimilarityAnalysisResponse
+     * @throws Swagger.ApiException if fails to make API call
+     */
+    public SwagSimilarityAnalysisResponse analyticsSimilarity(Map<String, Object> params) {
+        client.assertNotNull(params.get('input'), 'input');
+        List<Swagger.Param> query = new List<Swagger.Param>();
+        List<Swagger.Param> form = new List<Swagger.Param>();
+
+        return (SwagSimilarityAnalysisResponse) client.invoke(
+            'POST', '/nlp-v2/analytics/similarity',
+            (SwagSimilarityAnalysisRequest) params.get('input'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Apikey' },
+            SwagSimilarityAnalysisResponse.class
+        );
+    }
+    /**
      * Perform Subjectivity and Objectivity Analysis on Text
      * Analyze input text using advanced Subjectivity and Objectivity Language Analysis to determine if the input text is objective or subjective, and how much.  Supports English language input.  Consumes 1-2 API calls per sentence.
      * @param input Input subjectivity analysis request (required)
