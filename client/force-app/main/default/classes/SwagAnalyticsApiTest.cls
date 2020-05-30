@@ -1,6 +1,39 @@
 @isTest
 private class SwagAnalyticsApiTest {
     /**
+     * Perform Hate Speech Analysis and Detection on Text
+     *
+     * Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+     */
+    @isTest
+    private static void analyticsHateSpeechTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new SwaggerResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'input' => SwagHateSpeechAnalysisRequest.getExample()
+        };
+
+        SwagClient client;
+        SwagAnalyticsApi api;
+        SwagHateSpeechAnalysisResponse response;
+        SwagHateSpeechAnalysisResponse expectedResponse;
+
+        client = new SwagClient();
+        api = new SwagAnalyticsApi(client);
+        ((Swagger.ApiKeyAuth) client.getAuthentication('Apikey');
+            client.setApiKey('foo-bar-api-key');
+
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody('{\r\n  "SentenceCount" : 6,\r\n  "Successful" : true,\r\n  "HateSpeechScoreResult" : 0.8008281904610115\r\n}');
+        expectedResponse = SwagHateSpeechAnalysisResponse.getExample();
+        response = (SwagHateSpeechAnalysisResponse) api.analyticsHateSpeech(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Perform Profanity and Obscene Language Analysis and Detection on Text
      *
      * Analyze input text using advanced Profanity and Obscene Language Analysis to determine if the input contains profane language.  Supports English language input.  Consumes 1-2 API calls per sentence.

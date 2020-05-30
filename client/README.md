@@ -47,12 +47,12 @@ SwagClient client = api.getClient();
 
 
 Map<String, Object> params = new Map<String, Object>{
-    'input' => SwagProfanityAnalysisRequest.getExample()
+    'input' => SwagHateSpeechAnalysisRequest.getExample()
 };
 
 try {
     // cross your fingers
-    SwagProfanityAnalysisResponse result = api.analyticsProfanity(params);
+    SwagHateSpeechAnalysisResponse result = api.analyticsHateSpeech(params);
     System.debug(result);
 } catch (Swagger.ApiException e) {
     // ...handle your exceptions
@@ -65,6 +65,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*SwagAnalyticsApi* | [**analyticsHateSpeech**](docs/SwagAnalyticsApi.md#analyticsHateSpeech) | **POST** /nlp-v2/analytics/hate-speech | Perform Hate Speech Analysis and Detection on Text
 *SwagAnalyticsApi* | [**analyticsProfanity**](docs/SwagAnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *SwagAnalyticsApi* | [**analyticsSentiment**](docs/SwagAnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *SwagAnalyticsApi* | [**analyticsSimilarity**](docs/SwagAnalyticsApi.md#analyticsSimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
@@ -101,6 +102,8 @@ Class | Method | HTTP request | Description
  - [SwagExtractEntitiesResponse](docs/SwagExtractEntitiesResponse.md)
  - [SwagGetWordsRequest](docs/SwagGetWordsRequest.md)
  - [SwagGetWordsResponse](docs/SwagGetWordsResponse.md)
+ - [SwagHateSpeechAnalysisRequest](docs/SwagHateSpeechAnalysisRequest.md)
+ - [SwagHateSpeechAnalysisResponse](docs/SwagHateSpeechAnalysisResponse.md)
  - [SwagLanguageDetectionRequest](docs/SwagLanguageDetectionRequest.md)
  - [SwagLanguageDetectionResponse](docs/SwagLanguageDetectionResponse.md)
  - [SwagLanguageTranslationRequest](docs/SwagLanguageTranslationRequest.md)

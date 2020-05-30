@@ -4,11 +4,61 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**analyticsHateSpeech**](SwagAnalyticsApi.md#analyticsHateSpeech) | **POST** /nlp-v2/analytics/hate-speech | Perform Hate Speech Analysis and Detection on Text
 [**analyticsProfanity**](SwagAnalyticsApi.md#analyticsProfanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 [**analyticsSentiment**](SwagAnalyticsApi.md#analyticsSentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 [**analyticsSimilarity**](SwagAnalyticsApi.md#analyticsSimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
 [**analyticsSubjectivity**](SwagAnalyticsApi.md#analyticsSubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 
+
+<a name="analyticsHateSpeech"></a>
+# **analyticsHateSpeech**
+> SwagHateSpeechAnalysisResponse analyticsHateSpeech(input)
+
+Perform Hate Speech Analysis and Detection on Text
+
+Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+
+### Example
+```java
+SwagAnalyticsApi api = new SwagAnalyticsApi();
+SwagClient client = api.getClient();
+
+// Configure API key authorization: Apikey
+ApiKeyAuth Apikey = (ApiKeyAuth) client.getAuthentication('Apikey');
+Apikey.setApiKey('YOUR API KEY');
+
+Map<String, Object> params = new Map<String, Object>{
+    'input' => SwagHateSpeechAnalysisRequest.getExample()
+};
+
+try {
+    // cross your fingers
+    SwagHateSpeechAnalysisResponse result = api.analyticsHateSpeech(params);
+    System.debug(result);
+} catch (Swagger.ApiException e) {
+    // ...handle your exceptions
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**SwagHateSpeechAnalysisRequest**](SwagHateSpeechAnalysisRequest.md)| Input hate speech analysis request |
+
+### Return type
+
+[**SwagHateSpeechAnalysisResponse**](SwagHateSpeechAnalysisResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 <a name="analyticsProfanity"></a>
 # **analyticsProfanity**

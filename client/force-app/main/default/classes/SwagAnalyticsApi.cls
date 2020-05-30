@@ -26,6 +26,30 @@ public class SwagAnalyticsApi {
     }
 
     /**
+     * Perform Hate Speech Analysis and Detection on Text
+     * Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+     * @param input Input hate speech analysis request (required)
+     * @return SwagHateSpeechAnalysisResponse
+     * @throws Swagger.ApiException if fails to make API call
+     */
+    public SwagHateSpeechAnalysisResponse analyticsHateSpeech(Map<String, Object> params) {
+        client.assertNotNull(params.get('input'), 'input');
+        List<Swagger.Param> query = new List<Swagger.Param>();
+        List<Swagger.Param> form = new List<Swagger.Param>();
+
+        return (SwagHateSpeechAnalysisResponse) client.invoke(
+            'POST', '/nlp-v2/analytics/hate-speech',
+            (SwagHateSpeechAnalysisRequest) params.get('input'),
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'application/json' },
+            new List<String>{ 'application/json' },
+            new List<String> { 'Apikey' },
+            SwagHateSpeechAnalysisResponse.class
+        );
+    }
+    /**
      * Perform Profanity and Obscene Language Analysis and Detection on Text
      * Analyze input text using advanced Profanity and Obscene Language Analysis to determine if the input contains profane language.  Supports English language input.  Consumes 1-2 API calls per sentence.
      * @param input Input profanity analysis request (required)
